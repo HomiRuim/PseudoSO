@@ -17,7 +17,8 @@ typedef struct {
     int req_scanner;
     int req_modem;
     int req_sata;
-    
+    int remaining_time; // Tempo de CPU que ainda falta
+    bool is_started;    // Flag para imprimir o "STARTED" apenas uma vez
     int page_references[256]; 
     int page_ref_count;
 } Process;

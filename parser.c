@@ -38,6 +38,8 @@ void parse_processes(const char* filename) {
                &p->req_sata);
                
         p->page_ref_count = 0;
+        p->remaining_time = p->cpu_time;
+        p->is_started = false;
         total_processes++;
     }
     fclose(file);
